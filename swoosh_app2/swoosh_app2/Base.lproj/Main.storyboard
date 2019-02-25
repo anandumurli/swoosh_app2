@@ -184,6 +184,12 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beginnerBallerBG" translatesAutoresizingMaskIntoConstraints="NO" id="Mol-Kf-sLA">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="I am a" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fec-Xh-QiA">
+                                <rect key="frame" x="174.33333333333334" y="76" width="65.333333333333343" height="41"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" alignment="bottom" spacing="71" translatesAutoresizingMaskIntoConstraints="NO" id="2XJ-rz-fvP">
                                 <rect key="frame" x="49" y="27" width="219" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -196,17 +202,55 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="efh-Ir-fgx">
+                                <rect key="frame" x="89" y="163" width="237" height="43"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qhz-Ps-80p">
+                                        <rect key="frame" x="0.0" y="0.0" width="104" height="43"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.79827794890000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                                        <state key="normal" title="Beginner">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzU-sQ-9EV">
+                                        <rect key="frame" x="133" y="0.0" width="104" height="43"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.79827794890000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                                        <state key="normal" title="Baller">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5X-Od-lFz">
+                                <rect key="frame" x="10" y="673" width="394" height="43"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.79827794890000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                                <state key="normal" title="Beginner">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="t5X-Od-lFz" firstAttribute="centerX" secondItem="Wc7-t2-zBJ" secondAttribute="centerX" id="1qB-sl-adp"/>
                             <constraint firstItem="Mol-Kf-sLA" firstAttribute="top" secondItem="Wc7-t2-zBJ" secondAttribute="top" id="CP2-HY-ZGj"/>
+                            <constraint firstItem="Y0a-my-Vl1" firstAttribute="bottom" secondItem="t5X-Od-lFz" secondAttribute="bottom" constant="20" id="JCX-41-0A1"/>
+                            <constraint firstItem="efh-Ir-fgx" firstAttribute="top" secondItem="fec-Xh-QiA" secondAttribute="bottom" constant="50" id="Nev-0x-kL2"/>
                             <constraint firstItem="Mol-Kf-sLA" firstAttribute="trailing" secondItem="Y0a-my-Vl1" secondAttribute="trailing" id="P9H-I2-0Lq"/>
                             <constraint firstItem="Mol-Kf-sLA" firstAttribute="centerX" secondItem="Wc7-t2-zBJ" secondAttribute="centerX" id="PQv-Ov-Plq"/>
                             <constraint firstItem="Mol-Kf-sLA" firstAttribute="trailing" secondItem="Y0a-my-Vl1" secondAttribute="trailing" id="RJa-9S-hBb"/>
+                            <constraint firstItem="fec-Xh-QiA" firstAttribute="top" secondItem="F03-Xc-dUA" secondAttribute="bottom" constant="25" id="RtT-Mk-tLo"/>
                             <constraint firstItem="Mol-Kf-sLA" firstAttribute="top" secondItem="Wc7-t2-zBJ" secondAttribute="top" id="WZQ-yV-Sg3"/>
+                            <constraint firstItem="fec-Xh-QiA" firstAttribute="leading" secondItem="Y0a-my-Vl1" secondAttribute="leading" constant="174.33000000000001" id="ZHV-zR-22a"/>
+                            <constraint firstItem="Y0a-my-Vl1" firstAttribute="trailing" secondItem="t5X-Od-lFz" secondAttribute="trailing" constant="10" id="ZY8-wH-jg8"/>
                             <constraint firstItem="Mol-Kf-sLA" firstAttribute="bottom" secondItem="Y0a-my-Vl1" secondAttribute="bottom" id="jVr-hY-Dqv"/>
+                            <constraint firstItem="t5X-Od-lFz" firstAttribute="leading" secondItem="Y0a-my-Vl1" secondAttribute="leading" constant="10" id="kVh-le-gB9"/>
+                            <constraint firstItem="fec-Xh-QiA" firstAttribute="centerX" secondItem="Wc7-t2-zBJ" secondAttribute="centerX" id="ksV-vp-0kR"/>
                             <constraint firstItem="Mol-Kf-sLA" firstAttribute="leading" secondItem="Y0a-my-Vl1" secondAttribute="leading" id="nLw-Eb-0Ac"/>
                             <constraint firstItem="Mol-Kf-sLA" firstAttribute="centerX" secondItem="Wc7-t2-zBJ" secondAttribute="centerX" id="q9W-cA-c6V"/>
+                            <constraint firstItem="Y0a-my-Vl1" firstAttribute="trailing" secondItem="fec-Xh-QiA" secondAttribute="trailing" constant="174.33000000000001" id="w5g-Zg-9p7"/>
                             <constraint firstItem="Mol-Kf-sLA" firstAttribute="leading" secondItem="Y0a-my-Vl1" secondAttribute="leading" id="zx3-c3-Zdy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Y0a-my-Vl1"/>
