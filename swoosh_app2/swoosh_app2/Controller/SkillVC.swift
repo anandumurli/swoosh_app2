@@ -10,6 +10,9 @@ import UIKit
 
 class SkillVC: UIViewController {
 
+    @IBAction func onBackTapped(_ sender: Any) {
+        performSegue(withIdentifier: "leagueVCSegue", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
