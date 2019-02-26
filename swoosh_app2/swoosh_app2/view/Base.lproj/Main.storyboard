@@ -103,40 +103,61 @@
                                 <rect key="frame" x="147.66666666666666" y="28" width="118.99999999999997" height="20"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desired League:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTu-BU-SwG">
-                                <rect key="frame" x="145.33333333333334" y="113" width="123.66666666666666" height="24"/>
+                                <rect key="frame" x="145.33333333333334" y="113" width="123.66666666666666" height="23.333333333333343"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XX4-Mm-8fO">
-                                <rect key="frame" x="37.666666666666657" y="227" width="339" height="64"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.798277948943662" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="e1R-eH-HS2">
+                                <rect key="frame" x="37.666666666666657" y="227" width="339" height="234"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XX4-Mm-8fO">
+                                        <rect key="frame" x="0.0" y="0.0" width="339" height="64"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.798277948943662" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="339" id="FOo-li-PPr"/>
+                                            <constraint firstAttribute="height" constant="64" id="sfl-PF-ThI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                                        <state key="normal" title="Mens">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onMensTapped:" destination="YER-fG-7ww" eventType="touchUpInside" id="ZRz-Vz-rgk"/>
+                                        </connections>
+                                    </button>
+                                    <button verifyAmbiguity="off" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oT-QL-QMz">
+                                        <rect key="frame" x="0.0" y="85" width="339" height="64"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.79827794890000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                                        <state key="normal" title="Womens">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onWomenTapped:" destination="YER-fG-7ww" eventType="touchUpInside" id="5gt-Qu-OIB"/>
+                                        </connections>
+                                    </button>
+                                    <button verifyAmbiguity="off" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBU-Bq-ZRi">
+                                        <rect key="frame" x="0.0" y="170" width="339" height="64"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.79827794890000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                                        <state key="normal" title="Co-ed">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onCoedTapped:" destination="YER-fG-7ww" eventType="touchUpInside" id="aXQ-Pb-aWM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="339" id="FOo-li-PPr"/>
-                                    <constraint firstAttribute="height" constant="64" id="sfl-PF-ThI"/>
+                                    <constraint firstItem="MBU-Bq-ZRi" firstAttribute="width" secondItem="XX4-Mm-8fO" secondAttribute="width" id="BSn-82-v53"/>
+                                    <constraint firstItem="7oT-QL-QMz" firstAttribute="height" secondItem="XX4-Mm-8fO" secondAttribute="height" id="dB1-q4-Yvj"/>
+                                    <constraint firstItem="MBU-Bq-ZRi" firstAttribute="height" secondItem="XX4-Mm-8fO" secondAttribute="height" id="pz5-a2-6ak"/>
+                                    <constraint firstItem="7oT-QL-QMz" firstAttribute="width" secondItem="XX4-Mm-8fO" secondAttribute="width" id="vkE-JF-jxu"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
-                                <state key="normal" title="Mens">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button verifyAmbiguity="off" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oT-QL-QMz">
-                                <rect key="frame" x="37.666666666666657" y="313" width="339" height="53"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.79827794890000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
-                                <state key="normal" title="Womens">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button verifyAmbiguity="off" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBU-Bq-ZRi">
-                                <rect key="frame" x="37.666666666666657" y="387" width="339" height="62"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.79827794890000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
-                                <state key="normal" title="Co-ed">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4S-Pd-bBu">
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4S-Pd-bBu">
                                 <rect key="frame" x="30" y="673" width="354" height="43"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.79827794890000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
@@ -165,29 +186,22 @@
                             <constraint firstItem="8Jc-1c-4Iz" firstAttribute="top" secondItem="B6u-JG-AzP" secondAttribute="top" constant="6" id="DBR-my-yh9"/>
                             <constraint firstItem="RTu-BU-SwG" firstAttribute="centerX" secondItem="eBz-MA-Gop" secondAttribute="centerX" id="E7Z-db-geR"/>
                             <constraint firstAttribute="bottom" secondItem="AVC-Z8-iGA" secondAttribute="bottom" id="F3g-2w-4KW"/>
-                            <constraint firstItem="7oT-QL-QMz" firstAttribute="width" secondItem="XX4-Mm-8fO" secondAttribute="width" id="GBh-iw-hOw"/>
                             <constraint firstItem="B6u-JG-AzP" firstAttribute="bottom" secondItem="b4S-Pd-bBu" secondAttribute="bottom" constant="20" id="KVs-nl-kfE"/>
                             <constraint firstItem="BM8-bG-Vgf" firstAttribute="top" secondItem="B6u-JG-AzP" secondAttribute="top" constant="8" id="LDv-2Y-bsp"/>
                             <constraint firstItem="AVC-Z8-iGA" firstAttribute="trailing" secondItem="B6u-JG-AzP" secondAttribute="trailing" id="OxU-lY-ZNe"/>
                             <constraint firstItem="b4S-Pd-bBu" firstAttribute="leading" secondItem="B6u-JG-AzP" secondAttribute="leading" constant="30" id="RZo-GM-4gk"/>
-                            <constraint firstItem="7oT-QL-QMz" firstAttribute="height" secondItem="XX4-Mm-8fO" secondAttribute="height" id="Re7-pY-MXu"/>
                             <constraint firstItem="BM8-bG-Vgf" firstAttribute="centerX" secondItem="eBz-MA-Gop" secondAttribute="centerX" id="d4B-tI-7TS"/>
-                            <constraint firstItem="XX4-Mm-8fO" firstAttribute="centerX" secondItem="eBz-MA-Gop" secondAttribute="centerX" id="e9E-V4-vJO"/>
                             <constraint firstItem="b4S-Pd-bBu" firstAttribute="centerX" secondItem="eBz-MA-Gop" secondAttribute="centerX" id="fp2-vG-J51"/>
                             <constraint firstItem="AVC-Z8-iGA" firstAttribute="leading" secondItem="B6u-JG-AzP" secondAttribute="leading" id="hfU-N9-e8N"/>
                             <constraint firstItem="B6u-JG-AzP" firstAttribute="trailing" secondItem="b4S-Pd-bBu" secondAttribute="trailing" constant="30" id="jUi-4S-AZZ"/>
                             <constraint firstItem="AVC-Z8-iGA" firstAttribute="top" secondItem="eBz-MA-Gop" secondAttribute="top" id="lDQ-l3-tuJ"/>
                             <constraint firstItem="8Jc-1c-4Iz" firstAttribute="leading" secondItem="B6u-JG-AzP" secondAttribute="leading" constant="10" id="rgh-Wj-yTa"/>
-                            <constraint firstItem="MBU-Bq-ZRi" firstAttribute="width" secondItem="XX4-Mm-8fO" secondAttribute="width" id="sa0-EU-cxd"/>
-                            <constraint firstItem="7oT-QL-QMz" firstAttribute="centerX" secondItem="eBz-MA-Gop" secondAttribute="centerX" id="tPg-M1-JaG"/>
-                            <constraint firstItem="MBU-Bq-ZRi" firstAttribute="centerX" secondItem="eBz-MA-Gop" secondAttribute="centerX" id="tca-rv-Bl6"/>
-                            <constraint firstItem="XX4-Mm-8fO" firstAttribute="top" secondItem="RTu-BU-SwG" secondAttribute="bottom" constant="90" id="tmW-QL-9OJ"/>
                             <constraint firstItem="RTu-BU-SwG" firstAttribute="top" secondItem="BM8-bG-Vgf" secondAttribute="bottom" constant="65" id="uh1-ZT-Obu"/>
-                            <constraint firstItem="MBU-Bq-ZRi" firstAttribute="height" secondItem="XX4-Mm-8fO" secondAttribute="height" id="z65-xp-mCe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="B6u-JG-AzP"/>
                     </view>
                     <connections>
+                        <outlet property="NextBut" destination="b4S-Pd-bBu" id="HRe-Bc-2Tf"/>
                         <segue destination="tjM-aC-uUA" kind="show" identifier="SkillVCSegue" id="cFB-8k-Eda"/>
                     </connections>
                 </viewController>
@@ -221,7 +235,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="29.333333333333332" height="24"/>
                                         <state key="normal" image="backButton"/>
                                         <connections>
-                                            <action selector="onBackTapped:" destination="tjM-aC-uUA" eventType="touchUpInside" id="Y2D-Mz-gIO"/>
+                                            <segue destination="epR-aB-spl" kind="unwind" unwindAction="unwindWithLab:" id="cte-Bg-OIs"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swooshLogo" translatesAutoresizingMaskIntoConstraints="NO" id="F03-Xc-dUA">
@@ -242,6 +256,9 @@
                                         <state key="normal" title="Beginner">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="BeginnerTapped:" destination="tjM-aC-uUA" eventType="touchUpInside" id="xzm-Ii-Yn5"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzU-sQ-9EV">
                                         <rect key="frame" x="139" y="0.0" width="110" height="43"/>
@@ -250,10 +267,13 @@
                                         <state key="normal" title="Baller">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="BallerTapped:" destination="tjM-aC-uUA" eventType="touchUpInside" id="97t-y3-a3D"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5X-Od-lFz">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5X-Od-lFz">
                                 <rect key="frame" x="20.333333333333343" y="678" width="387" height="43"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.79827794890000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
@@ -289,10 +309,11 @@
                         <viewLayoutGuide key="safeArea" id="Y0a-my-Vl1"/>
                     </view>
                     <connections>
-                        <segue destination="YER-fG-7ww" kind="show" identifier="leagueVCSegue" id="r8c-vd-bod"/>
+                        <outlet property="EndBut" destination="t5X-Od-lFz" id="KEg-ec-EGH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9T4-tb-Hk4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="epR-aB-spl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1615.9420289855075" y="26.90217391304348"/>
         </scene>
@@ -304,7 +325,4 @@
         <image name="swooshLogo" width="119" height="20"/>
         <image name="welcomeScreenBG" width="414" height="736"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="r8c-vd-bod"/>
-    </inferredMetricsTieBreakers>
 </document>

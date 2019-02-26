@@ -10,12 +10,29 @@ import UIKit
 
 class SkillVC: UIViewController {
 
-    @IBAction func onBackTapped(_ sender: Any) {
-        performSegue(withIdentifier: "leagueVCSegue", sender: self)
+    var player: athlete!
+    
+    @IBAction func BeginnerTapped(_ sender: Any) {
+        setskill(skill: "Beginner")
     }
+    
+    @IBAction func BallerTapped(_ sender: Any) {
+        setskill(skill: "Baller")
+    }
+    
+    
+    
+    @IBOutlet weak var EndBut: UIButton!
+    
+    func setskill(skill: String){
+        player.skill=skill
+        EndBut.isEnabled = true
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
